@@ -1,0 +1,11 @@
+pandas
+numpy
+scipy
+statsmodels
+pmdarima
+scikit-learn
+matplotlib
+seaborn
+plotly
+jupyterlab
+fredapi
