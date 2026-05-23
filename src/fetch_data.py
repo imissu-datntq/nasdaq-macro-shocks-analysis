@@ -15,22 +15,26 @@ series_dict = {
     'FEDFUNDS': 'Lãi suất Quỹ Liên bang (FFR)'
 }
 
-print("Đang tải dữ liệu trực tiếp từ URL của FRED...")
+def download_fred_data():
+    print("Đang tải dữ liệu trực tiếp từ URL của FRED...")
 
-for series_code, name in series_dict.items():
-    try:
-        # Link tải file CSV trực tiếp từ biểu đồ của FRED
-        url = f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_code}"
-        
-        # Dùng pandas đọc trực tiếp từ link web
-        df = pd.read_csv(url)
-        
-        # Lưu file xuống thư mục local
-        file_path = RAW_DIR / f"{series_code}.csv"
-        df.to_csv(file_path, index=False)
-        print(f"✓ Đã khôi phục thành công: {name} -> data/raw/{file_path.name}")
-        
-    except Exception as e:
-        print(f"⚠ Lỗi khi tải {series_code}: {e}")
+    for series_code, name in series_dict.items():
+        try:
+            # Link tải file CSV trực tiếp từ biểu đồ của FRED
+            url = f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_code}"
+            
+            # Dùng pandas đọc trực tiếp từ link web
+            df = pd.read_csv(url)
+            
+            # Lưu file xuống thư mục local
+            file_path = RAW_DIR / f"{series_code}.csv"
+            df.to_csv(file_path, index=False)
+            print(f"✓ Đã khôi phục thành công: {name} -> data/raw/{file_path.name}")
+            
+        except Exception as e:
+            print(f"⚠ Lỗi khi tải {series_code}: {e}")
 
-print("\nHoàn tất!")
+    print("\nHoàn tất!")
+
+if __name__ == "__main__":
+    download_fred_data()
