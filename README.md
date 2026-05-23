@@ -66,6 +66,11 @@ nasdaq-macro-shocks-analysis/
    pip install pmdarima  # Cho thành phần SARIMA Grid Search
    ```
 
-3. **Thực thi phân tích**:
-   Hãy làm mới (restart kernel) và chạy (Run All) toàn bộ quy trình Notebooks từ số định danh `00` cho tiến đến `06`. Mọi bảng biểu và đồ họa sẽ tự động ghi đè và biên dịch tại thư viện `/outputs/figures` và `/outputs/tables`.
+3. **Thực thi phân tích (End-to-End Pipeline)**:
+   Dự án được đi kèm với một script thực thi tự động toàn bộ quy trình từ tải dữ liệu đến huấn luyện mô hình và xuất báo cáo.
+   - Trên Terminal (đã kích hoạt `.venv`), chỉ cần chạy lệnh:
+     ```bash
+     .\run_pipeline.bat
+     ```
+   - Script sẽ chạy tuần tự tự động từ định danh `00` đến `06`. Mọi bảng biểu và đồ họa sẽ tự động ghi đè và biên dịch tại `/outputs/figures` và `/outputs/tables`.
 
