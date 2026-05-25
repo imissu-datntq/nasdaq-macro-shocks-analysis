@@ -1,0 +1,4 @@
+series,rows_total,rows_non_null_value,start_date,end_date,inferred_freq,expected_freq_check,missing_periods_count
+NASDAQ100,10530,10171,1986-01-02,2026-05-13,B,B,0
+CPIAUCSL,952,951,1947-01-01,2026-04-01,MS,MS,0
+FEDFUNDS,862,862,1954-07-01,2026-04-01,MS,MS,0

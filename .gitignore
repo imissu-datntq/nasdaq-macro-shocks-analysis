@@ -1,15 +1,15 @@
-# Bỏ qua môi trường ảo
+# Virtual environments
 .venv/
 venv/
 env/
 
-# Bỏ qua dữ liệu (rất quan trọng)
-data/raw/
-data/processed/
-*.csv
-*.xlsx
+# Generated or downloaded data
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
 
-# Bỏ qua các file tạm của Python và Jupyter
+# Python and Jupyter temporary files
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
